@@ -762,7 +762,8 @@ footer {
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.03);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
 }
 .upsell-title {
     margin: 0 0 10px 0;
@@ -775,6 +776,7 @@ footer {
     gap: 10px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
     scrollbar-width: none;
     padding-bottom: 10px;
 }
@@ -1215,6 +1217,7 @@ footer {
         overflow-x: auto;
         padding-bottom: 10px;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
         scrollbar-width: none; /* Firefox */
         top: 90px; /* Empujado mÃ¡s abajo para que no se corte con el header */
     }

@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary: #800020; /* Vinotinto */
     --primary-glow: rgba(128, 0, 32, 0.4);
     --bg-dark: #09090b; /* Zinc 950 - Negro CarbÃ³n Mate */
@@ -774,8 +774,9 @@ footer {
     display: flex;
     gap: 10px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 .upsell-container::-webkit-scrollbar { display: none; }
 .upsell-btn {

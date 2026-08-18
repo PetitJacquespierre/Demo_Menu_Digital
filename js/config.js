@@ -2,7 +2,7 @@
 const clientConfig = {
     id: "Demo_Menu_Digital", // Identificador único para el Kill Switch
     businessName: "Demo Grow Studio",
-    whatsapp: "584149634585", // Reemplazar con el número de WhatsApp del cliente
+    whatsapp: "584127732710", // Reemplazar con el número de WhatsApp del cliente
     hojaDeCalculo: "https://script.google.com/macros/s/AKfycbzMpnWi8f2tygwIJk_MR1RFqDZE1BnQzhdfT78gWdBghF55vbePGpkagWSlqr7_4T7F/exec", // Enlace al Google Sheets de la Demo
     colors: {
         primary: "#F59E0B",   // Color principal (Ámbar por defecto)

@@ -181,6 +181,14 @@
             <!-- CUERPO SCROLLEABLE -->
             <div class="cart-body">
                 <!-- 1. FORMULARIO DE ENVÃO -->
+                <!-- 2. RESUMEN DE PRODUCTOS -->
+                <div class="cart-items-section">
+                    <h4 class="section-heading">Productos Seleccionados</h4>
+                    <div id="cart-items">
+                        <p class="empty-cart">Tu carrito está vacío.</p>
+                    </div>
+                </div>
+
                 <!-- 1. FORMULARIO DE ENVÍO -->
                 <div class="cart-form-section">
                     <h4 class="section-heading">Datos de Entrega</h4>
@@ -188,8 +196,7 @@
                     <div class="form-group">
                         <label class="form-label"><i class="fa-solid fa-truck-fast text-yellow"></i> Zona de Delivery:</label>
                         <select id="delivery-zone" class="form-select" onchange="updateTotal()">
-                            <option value="0" data-type="retiro">Retiro en Tienda (No deseo envío)</option>
-                            <option value="1" data-type="delivery">Cerca de la Junta (Zona 1) (+$1.00 USD)</option>
+                            <option value="1" data-type="delivery">Zona 1 (+$1.00 USD)</option>
                             <option value="2" data-type="delivery">Zona 2 (+$2.00 USD)</option>
                             <option value="3" data-type="delivery">Zona 3 (+$3.00 USD)</option>
                         </select>
@@ -222,8 +229,10 @@
                     <div class="form-group">
                         <select id="payment-method" class="form-select" onchange="togglePaymentDetails()">
                             <option value="Pago Móvil">Pago Móvil</option>
-                            <option value="Divisas (Efectivo)">Divisas (Efectivo)</option>
-                            <option value="USDT" disabled>USDT (PrÃ³ximamente)</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Divisas">Divisas</option>
+                            <option value="USDT">USDT</option>
+                            <option value="Zelle">Zelle</option>
                         </select>
                     </div>
 
@@ -265,20 +274,15 @@
                     </div>
                 </div>
 
-                <!-- 2. RESUMEN DE PRODUCTOS -->
-                <div class="cart-items-section">
-                    <h4 class="section-heading">Productos Seleccionados</h4>
-                    <div id="cart-items">
-                        <p class="empty-cart">Tu carrito está vacío.</p>
-                    </div>
-                </div>
-            </div>
+
+            
+            </div> <!-- End cart-body -->
 
             <!-- 3. UPSIDE / VENTA CRUZADA -->
             <div class="cart-upsell-section" style="display: block;">
                 <h5 class="upsell-title">¿Deseas agregar un extra?</h5>
                 <div class="upsell-container">
-                    <!-- Botones generados dinÃ¡micamente por JS (renderUpsells) -->
+                    <!-- Botones generados dinámicamente por JS (renderUpsells) -->
                 </div>
             </div>
 

@@ -54,10 +54,10 @@ function sendOrder() {
     const totalUsd = subtotal + deliveryCost;
 
     text += `\r\n*TOTAL A PAGAR: $${totalUsd.toFixed(2)}*\r\n\r\n`;
-    text += `🔥 Hola! Estoy probando la Demo. Me interesa un menú digital interactivo como este para mi negocio. ¿Me puedes dar más información sobre los planes?`;
+    text += `🔥 Hola! Estoy probando la Demo. Me interesa un menú digital interactivo como este para mi negocio. INFO DEMO`;
 
     const encodedText = encodeURIComponent(text);
-    const whatsappNum = clientConfig && clientConfig.whatsapp ? clientConfig.whatsapp : "584149634585";
+    const whatsappNum = clientConfig && clientConfig.whatsapp ? clientConfig.whatsapp : "584127732710";
     const whatsappUrl = `https://wa.me/${whatsappNum}?text=${encodedText}`;
     
     window.open(whatsappUrl, '_blank');

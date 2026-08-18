@@ -1,0 +1,17 @@
+{
+  "name": "Demo Grow Studio",
+  "short_name": "Demo Menú",
+  "description": "Menú Digital Interactivo de Grow Studio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#F59E0B",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

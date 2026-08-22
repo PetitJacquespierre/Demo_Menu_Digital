@@ -542,8 +542,8 @@ main {
 
 .menu-grid {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .product-card {
@@ -1382,6 +1382,56 @@ footer {
         height: 100dvh;
         height: -webkit-fill-available;
     }
+}
 
+/* GRID 2 COLUMNAS MOBILE -> MULTICOLUMNA DESKTOP */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Ajustes perfectos de mÃ¡rgenes y tarjetas para 2 columnas en mÃ³vil */
+@media (max-width: 767px) {
+    /* Ajuste de contenedores principales para no desperdiciar espacio lateral */
+    main {
+        padding: 10px; /* Reducimos el padding lateral para ganar espacio */
+    }
+    header {
+        padding: 12px 15px; /* Cabecera un poco mÃ¡s compacta */
+    }
+    .hero-content {
+        padding: 30px 15px; /* Hero section menos espaciosa a los lados */
+    }
+    
+    /* Ajuste de las tarjetas para que la info quepa perfecto en 2 columnas */
+    .product-content {
+        padding: 0 8px; /* Menos padding interno en la tarjeta */
+    }
+    .product-info h3 {
+        font-size: 0.95rem; /* Texto mÃ¡s pequeÃ±o */
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    .product-desc {
+        font-size: 0.75rem; 
+        margin-bottom: 10px;
+        -webkit-line-clamp: 3; /* Permitimos 3 lÃ­neas de descripciÃ³n si es necesario */
+    }
+    .price-usd {
+        font-size: 1.25rem; /* Precio un poco mÃ¡s pequeÃ±o */
+    }
+    .add-btn {
+        padding: 8px; 
+        font-size: 0.8rem; /* BotÃ³n mÃ¡s compacto */
+    }
+    .product-card {
+        padding: 0 0 12px 0;
+        border-radius: 12px; /* Bordes un pelÃ­n mÃ¡s suaves en mÃ³vil */
+    }
+    .product-image-box {
+        margin-bottom: 10px; /* Menos espacio entre imagen y tÃ­tulo */
+    }
 }
 

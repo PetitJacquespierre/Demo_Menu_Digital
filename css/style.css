@@ -193,12 +193,13 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
+    max-width: 50%;
 }
 
 #header-logo {
     width: auto;
-    height: 100px;
-    max-width: 250px;
+    height: 60px; /* Reducido para evitar overflow en móviles */
+    max-width: 100%;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
@@ -208,6 +209,19 @@ header {
 #header-logo:hover {
     transform: scale(1.03);
     filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.6));
+}
+
+@media (max-width: 480px) {
+    #header-logo {
+        height: 45px;
+    }
+    .header-actions {
+        gap: 5px !important;
+    }
+    .bcv-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
 }
 
 .bcv-badge {
@@ -496,20 +510,26 @@ main {
 
 
 /* ========================================= */
-/* FILTROS DINÃMICOS (STICKY MENU)           */
+/* FILTROS DINÃ MICOS (STICKY MENU)           */
 /* ========================================= */
 .filters-container {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     position: sticky;
-    top: 135px; /* Debajo del header mÃ¡s grande */
+    top: 90px; /* Adjust sticky top for smaller header */
     z-index: 90;
     background: #000;
-    padding: 10px;
+    padding: 10px 15px;
     border-bottom: 1px solid rgba(255,193,7,0.2);
+}
+.filters-container::-webkit-scrollbar {
+    display: none;
 }
 
 .filter-btn {
